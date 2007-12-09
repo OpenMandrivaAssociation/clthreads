@@ -1,11 +1,11 @@
-%define	major	1
+%define	major	2
 %define	libname	%mklibname %name %major
-%define oldlibname %mklibname %name 2
+%define oldlibname %mklibname %name 1
 
 Name:          clthreads
 Summary:       Clthreads C++ libraries
 Version:       2.2.1
-Release:       %mkrel 1
+Release:       %mkrel 2
 License:       GPL
 Group:	       System/Libraries 
 Source0:       %{name}-%{version}.tar.bz2
@@ -22,6 +22,7 @@ Clthreads C++ libraries
 Group: 		System/Libraries
 Summary: 	Libraries for %name
 Provides: 	lib%name = %version-%release
+Obsoletes:      %{oldlibname} < 2.2.1-2
 
 %description 
 Clthreads C++ libraries
@@ -45,6 +46,7 @@ Summary: 	Libraries for %name
 Requires:	%libname = %version-%release
 Provides:	lib%name-devel = %version-%release
 Provides: 	%{name}-devel = %{version}-%{release}
+Obsoletes:      %{oldlibname}-devel < 2.2.1-2
 
 %description -n	%libname-devel
 Development libraries from %name
