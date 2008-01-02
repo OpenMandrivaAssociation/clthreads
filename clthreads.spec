@@ -11,6 +11,7 @@ Group:	       System/Libraries
 Source0:       %{name}-%{version}.tar.bz2
 Patch0:        clthreads-2.2.1-fix-install.patch
 URL: 	       http://users.skynet.be/solaris/linuxaudio/getit.html
+BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Clthreads C++ libraries
