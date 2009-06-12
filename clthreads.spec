@@ -6,7 +6,7 @@
 Name:          clthreads
 Summary:       Clthreads C++ libraries
 Version:       2.2.1
-Release:       %mkrel 5
+Release:       %mkrel 6
 License:       LGPLv2+
 Group:	       System/Libraries 
 Source0:       %{name}-%{version}.tar.bz2
