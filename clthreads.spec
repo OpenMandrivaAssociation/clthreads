@@ -5,13 +5,14 @@
 
 Name:          clthreads
 Summary:       Clthreads C++ libraries
-Version:       2.2.1
-Release:       %mkrel 6
+Version:       2.4.0
+Release:       %mkrel 1
 License:       LGPLv2+
 Group:	       System/Libraries 
-Source0:       %{name}-%{version}.tar.bz2
+Source0:       http://www.kokkinizita.net/linuxaudio/downloads/%{name}-%{version}.tar.bz2
 Patch0:        clthreads-2.2.1-fix-install.patch
-URL: 	       http://users.skynet.be/solaris/linuxaudio/getit.html
+Patch1:        clthreads-2.4.0-linkage.patch
+URL: 	       http://www.kokkinizita.net/linuxaudio/aeolus/index.html
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -64,14 +65,15 @@ Development libraries from %name
 
 %prep
 %setup -q -n %name-%version
-%patch0 -p0
+%patch1 -p0
 
 %build
-
-%make
+%make LDFLAGS="%{ldflags}" CPPFLAGS="%{optflags} -fPIC"
 
 %install
-make DESTDIR=%buildroot  install
+rm -fr %buildroot
+mkdir -p %{buildroot}%{_includedir}
+make install PREFIX=%{buildroot}%{_prefix}
 
 %clean
-
+rm -fr %buildroot
