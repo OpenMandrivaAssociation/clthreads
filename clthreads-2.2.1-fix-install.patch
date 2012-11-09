@@ -1,0 +1,22 @@
+--- Makefile~	2006-11-23 19:01:20.000000000 +0100
++++ Makefile	2007-12-09 01:27:07.000000000 +0100
+@@ -46,11 +46,14 @@
+ 
+ 
+ install:	$(CLTHREADS_MIN)
+-	/usr/bin/install -d $(PREFIX)/$(LIBDIR)
+-	/usr/bin/install -m 644 $(CLTHREADS_H) $(PREFIX)/include
+-	/usr/bin/install -m 755 $(CLTHREADS_MIN) $(PREFIX)/$(LIBDIR)
+-	/sbin/ldconfig -n $(PREFIX)/$(LIBDIR)
+-	ln -sf $(CLTHREADS_MIN) $(PREFIX)/$(LIBDIR)/$(CLTHREADS_SO)
++	/bin/mkdir -p $(DESTDIR)$(PREFIX)/$(LIBDIR)
++	/usr/bin/install -d $(DESTDIR)$(PREFIX)/$(LIBDIR)
++	/bin/mkdir -p $(DESTDIR)$(PREFIX)/include
++	/usr/bin/install -m 644 $(CLTHREADS_H) $(DESTDIR)$(PREFIX)/include
++	/bin/mkdir -p $(DESTDIR)$(PREFIX)/$(LIBDIR)
++	/usr/bin/install -m 755 $(CLTHREADS_MIN) $(DESTDIR)$(PREFIX)/$(LIBDIR)
++	/sbin/ldconfig -n $(DESTDIR)$(PREFIX)/$(LIBDIR)
++	ln -sf $(CLTHREADS_MIN) $(DESTDIR)$(PREFIX)/$(LIBDIR)/$(CLTHREADS_SO)
+ 
+ 
+ clean:
