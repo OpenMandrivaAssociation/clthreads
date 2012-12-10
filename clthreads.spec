@@ -77,3 +77,42 @@ make install PREFIX=%{buildroot}%{_prefix}
 
 %clean
 rm -fr %buildroot
+
+
+%changelog
+* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 2.4.0-2mdv2011.0
++ Revision: 617048
+- the mass rebuild of 2010.0 packages
+
+* Mon Sep 07 2009 Funda Wang <fwang@mandriva.org> 2.4.0-1mdv2010.0
++ Revision: 432737
+- New version 2.4.0
+
+* Fri Jun 12 2009 Jérôme Brenier <incubusss@mandriva.org> 2.2.1-6mdv2010.0
++ Revision: 385598
+- rebuild
+
+* Mon Aug 25 2008 Emmanuel Andry <eandry@mandriva.org> 2.2.1-5mdv2009.0
++ Revision: 276014
+- apply devel policy
+- fix license
+
+* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 2.2.1-4mdv2009.0
++ Revision: 243531
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Nicolas Lécureuil <nlecureuil@mandriva.com>
+    - Fix major
+
+* Sun Dec 09 2007 Nicolas Lécureuil <nlecureuil@mandriva.com> 2.2.1-1mdv2008.1
++ Revision: 116569
+- import clthreads
+
+
