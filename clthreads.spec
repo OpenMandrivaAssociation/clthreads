@@ -6,7 +6,7 @@
 Name:          clthreads
 Summary:       Clthreads C++ libraries
 Version:       2.4.0
-Release:       %mkrel 2
+Release:       3
 License:       LGPLv2+
 Group:	       System/Libraries 
 Source0:       http://www.kokkinizita.net/linuxaudio/downloads/%{name}-%{version}.tar.bz2
