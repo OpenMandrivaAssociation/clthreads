@@ -12,7 +12,7 @@ Group:	       System/Libraries
 Source0:       http://www.kokkinizita.net/linuxaudio/downloads/%{name}-%{version}.tar.bz2
 Patch0:        clthreads-2.2.1-fix-install.patch
 Patch1:        clthreads-2.4.0-linkage.patch
-URL: 	       http://www.kokkinizita.net/linuxaudio/aeolus/index.html
+URL: 	       https://www.kokkinizita.net/linuxaudio/aeolus/index.html
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
