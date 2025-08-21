@@ -23,7 +23,7 @@ Summary:	Libraries for %{name}
 Group:	System/Libraries
 %rename	%{oldlibname}
 
-%description 
+%description -n %{libname}
 C++ wrapper library around the POSIX threads API. This package contains
 the main %{name} library.
 
