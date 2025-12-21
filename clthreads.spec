@@ -13,6 +13,7 @@ Url:	https://kokkinizita.linuxaudio.org/linuxaudio/
 Source0:	https://kokkinizita.linuxaudio.org/linuxaudio/downloads/%{name}-%{version}.tar.bz2
 Patch0:		clthreads-2.4.2-fix-makefile.patch
 
+BuildRequires:	make
 %description
 C++ wrapper library around the POSIX threads API.
 
